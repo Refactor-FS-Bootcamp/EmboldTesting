@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     name: Embold scan
     steps:
-      - run: curl https://user-dev.refactor.academy
+      - run: curl -d 'repoBranchOrTag=main&snapshotLabel=firstLabel' -X POST ${{secrets.EMBOLD_URL}}/api/v1/${{secrets.REPO_UID}}/scan
