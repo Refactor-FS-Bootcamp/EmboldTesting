@@ -1,0 +1,145 @@
+{
+    "gammaAccess": {
+        "url": "",
+        "token": ""
+    },
+    "repositories": [
+        {
+            "dataDir": "./EMBOLD_DATA",
+            "repository": {
+                "uid": "3ef86e601615d1defc39a0e2d224b1e5",
+                "projectName": "EmboldTesting",
+                "languages": [
+                    "TYPESCRIPT"
+                ],
+                "sources": {
+                    "baseDir": "$GITHUB_WORKSPACE",
+                    "exclusions": [
+                        "node_modules",
+                        ".min.js",
+                        "dist",
+                        "external",
+                        "assets",
+                        "gulp",
+                        "grunt",
+                        "libs",
+                        "-bundle.js",
+                        ".bundle.js",
+                        "swagger-ui",
+                        ".config.js",
+                        "-config.js",
+                        "UNKNOWN_FILE",
+                        ".git",
+                        ".ebextensions",
+                        "test",
+                        ".lib",
+                        ".library",
+                        ".zip",
+                        ".d.ts"
+                    ]
+                }
+            },
+            "settings": {
+                "additionalOptions": [],
+                "includePaths": []
+            },
+            "modules": {
+                "report_processor": [
+                    {
+                        "name": "ext_report_processor",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": [
+                                {
+                                    "name": "dem.reportDir",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                },
+                                {
+                                    "name": "dem.reportFile",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                },
+                                {
+                                    "name": "memory.reportDir",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                },
+                                {
+                                    "name": "memory.reportFile",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                },
+                                {
+                                    "name": "ameos.reportDir",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                },
+                                {
+                                    "name": "ameos.reportFile",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "relevance": [
+                    {
+                        "name": "relevance",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": [
+                                {
+                                    "name": "mode",
+                                    "value": "git"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "codeissues": [
+                    {
+                        "name": "tslint",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": []
+                        }
+                    },
+                    {
+                        "name": "eslint",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": []
+                        }
+                    },
+                    {
+                        "name": "gamma_generic",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": [
+                                {
+                                    "name": "reportDir",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+name: Embold Testing
+
+on:
+ push:
+  branches: [main]
+
+
+jobs:
+   embold_scan_job:
+    runs-on: ubuntu-latest
+    name: Embold scan
+    steps:
+      - uses: actions/checkout@v2
+      - name: Embold scan step
+        id: embold
+        uses: embold/github-action-docker@v0.2
+        with:
+          embold-url: ${{ secrets.EMBOLD_URL }}
+          embold-token: ${{ secrets.EMBOLD_ACCESS_TOKEN }}
+          repo-config: '/github/workspace/repository-configuration.json'
+          repo-uid: ${{ secrets.REPO_UID }}
