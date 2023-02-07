@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     name: Embold scan
     steps:
-      - run: "curl -d 'repoBranchOrTag=main&snapshotLabel=firstLabel' -H 'Authorization: Bearer eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTY3NTMzMjM5MDA1MiwiaWF0IjoxNjc1MzMyMzkwfQ.Mq4YUk5kzi0I8m_rCSoafAB6jZttaT-MOEvii3wQUGt0pTRPA5Uh6cbox5Rb7K_i8j8GhEdDtI-1j1QeuHL_uQ' -X POST ${{secrets.EMBOLD_URL}}/api/v1/${{secrets.REPO_UID}}/scan"
+      - run: "curl -d 'repoBranchOrTag=main&snapshotLabel=firstLabel' -H 'Authorization: Bearer eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTY3NTMzMjM5MDA1MiwiaWF0IjoxNjc1MzMyMzkwfQ.Mq4YUk5kzi0I8m_rCSoafAB6jZttaT-MOEvii3wQUGt0pTRPA5Uh6cbox5Rb7K_i8j8GhEdDtI-1j1QeuHL_uQ' -X POST ${{secrets.EMBOLD_URL}}/api/v1/repositories/${{secrets.REPO_UID}}/scan"
